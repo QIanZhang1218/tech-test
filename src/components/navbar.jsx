@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { Navbar, Container, Nav, NavDropdown, Image } from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Nav } from "react-bootstrap";
 import "../App.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Dropdown from "./dropdown";

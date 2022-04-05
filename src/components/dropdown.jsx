@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Navbar, Container, Nav, NavDropdown, Image } from "react-bootstrap";
+import React from "react";
+import { Nav, NavDropdown } from "react-bootstrap";
 
 const Dropdown = (props) => {
   const teacher = {
