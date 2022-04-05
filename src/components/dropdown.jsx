@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Navbar, Container, Nav, NavDropdown, Image } from "react-bootstrap";
 
 const Dropdown = (props) => {
-  console.log(props);
-
   const teacher = {
     value: "teacher",
     title: "teacher@school.org",
