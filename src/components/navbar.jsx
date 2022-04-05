@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef } from "react";
 import { Navbar, Container, Nav, NavDropdown, Image } from "react-bootstrap";
 import "../App.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -6,6 +6,9 @@ import Dropdown from "./dropdown";
 
 const Header = () => {
   const [isStudent, setStudent] = useState(false);
+  const changeRole = () => {
+    isStudent ? setStudent(false) : setStudent(true);
+  };
   const teacherNav = (
     <Nav className="me-auto">
       <Nav.Link href="/Classes">Classes</Nav.Link>
@@ -36,8 +39,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           {isStudent ? studentNav : teacherNav}
-          {/* {studentNav} */}
-          <Dropdown isStudent={isStudent} />
+          <Dropdown isStudent={isStudent} setStudent={changeRole} />
         </Navbar.Collapse>
       </Navbar>
     </>
