@@ -2,26 +2,16 @@ import React from "react";
 import { Nav, NavDropdown } from "react-bootstrap";
 
 const Dropdown = (props) => {
-  const teacher = {
-    value: "teacher",
-    title: "teacher@school.org",
-    item: "student@school.org",
-  };
-  const student = {
-    value: "student",
-    title: "student@school.org",
-    item: "teacher@school.org",
-  };
-
+  const { config, setStatus } = props;
   return (
     <Nav>
       <NavDropdown
-        title={props.isStudent ? student.title : teacher.title}
+        title={config.title}
         id="collasible-nav-dropdown"
         className="me-3"
       >
-        <NavDropdown.Item href="#action/3.1" onClick={props.setStudent}>
-          {props.isStudent ? student.item : teacher.item}
+        <NavDropdown.Item href="#action/3.1" onClick={setStatus}>
+          {config.item}
         </NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Settings</NavDropdown.Item>

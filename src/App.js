@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/navbar";
+import NavWrapper from "./components/NavWrapper";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
+      <NavWrapper />
     </div>
   );
 };
